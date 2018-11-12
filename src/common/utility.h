@@ -6,6 +6,9 @@
 #include <QString>
 #include <QTextStream>
 
+class QColor;
+class QWidget;
+
 // Print to stdout.
 // Example: qStdOut() << "std out!";
 QTextStream& qStdOut();
@@ -31,5 +34,11 @@ inline QString GetStudyDataDir() {
 inline QString GetStudyDataFile(const QString& filename) {
   return GetStudyDataDir() + filename;
 }
+
+namespace utility {
+
+void SetBackgroundColor(QWidget* widget, const QColor& color);
+
+}  // namespace utility
 
 #endif  // UTILITY_H_

@@ -1,10 +1,12 @@
 #include <QtGlobal>  // For Q_ASSERT
+#include <QDebug>
 
 #include "common/utility.h"
 
 int main() {
   QString hello = "Hello, World!";
-  std::cout << hello << std::endl;
+  //std::cout << hello << std::endl;
+  qInfo() << hello;
 
   // NOTE: Q_ASSERT is just like C assert(), only effective in debug build.
 

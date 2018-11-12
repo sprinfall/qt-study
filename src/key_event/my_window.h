@@ -12,6 +12,9 @@ class MyWindow : public QMainWindow {
 public:
   MyWindow();
 
+private slots:
+  void ClearLogs();
+
 private:
   // Text edit for logging the events.
   QPlainTextEdit* log_text_edit_;

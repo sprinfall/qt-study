@@ -17,7 +17,6 @@ MyWindow::MyWindow() {
   log_text_edit_ = new QPlainTextEdit();
 
   clear_button_ = new QPushButton(tr("Clear logs"));
-  //connect();
 
   QVBoxLayout* vlayout = new QVBoxLayout();
 
@@ -30,4 +29,12 @@ MyWindow::MyWindow() {
   my_widget->set_log_text_edit(log_text_edit_);
 
   resize(800, 600);
+
+  QObject::connect(clear_button_, &QPushButton::clicked,
+                   this, &MyWindow::ClearLogs);
 }
+
+void MyWindow::ClearLogs() {
+  log_text_edit_->clear();
+}
+

@@ -1,3 +1,5 @@
 add_subdirectory(common)
 add_subdirectory(core)
+add_subdirectory(gui)
 add_subdirectory(key_event)
+add_subdirectory(paint)
