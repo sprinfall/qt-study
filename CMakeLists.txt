@@ -27,9 +27,12 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-find_package(Qt5Widgets)
-# find_package(Qt5Core)
-# find_package(Qt5Gui)
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+
+# Get Qt5 bin dir
+get_target_property(Qt5CoreLocation Qt5::Core LOCATION)
+get_filename_component(Qt5BinDir ${Qt5CoreLocation} DIRECTORY "Qt5 bin dir location")
+message(STATUS "Qt bin dir: ${Qt5BinDir}")
 
 include_directories(${PROJECT_SOURCE_DIR}/src)
 

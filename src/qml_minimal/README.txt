@@ -1,0 +1,1 @@
+See: https://www.apriorit.com/dev-blog/475-qt-qml-with-cmake
