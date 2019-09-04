@@ -29,10 +29,10 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-# Get Qt5 bin dir
-get_target_property(Qt5CoreLocation Qt5::Core LOCATION)
-get_filename_component(Qt5BinDir ${Qt5CoreLocation} DIRECTORY "Qt5 bin dir location")
-message(STATUS "Qt bin dir: ${Qt5BinDir}")
+# Get Qt5 bin dir.
+get_target_property(Qt5Core_location Qt5::Core LOCATION)
+get_filename_component(Qt5_location ${Qt5Core_location} DIRECTORY "Qt5 binray location")
+message(STATUS "Qt: ${Qt5_location}")
 
 include_directories(${PROJECT_SOURCE_DIR}/src)
 

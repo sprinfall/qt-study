@@ -14,6 +14,8 @@ CMAKE_PREFIX_PATH = C:\Qt\5.10.1\msvc2013_64
 
 注意：`CMAKE_PREFIX_PATH` 可以指定多个目录，以分号分隔。但是 `CMAKE_PREFIX_PATH` 的类型需为 `FILEPATH` 而非 `STRING`。可以指定多个目录是你的程序可能还要寻找其他程序库，比如 VTK，这时候你应该把 VTK 的安装目录也加进来。
 
+当然，`CMAKE_PREFIX_PATH` 也可以为系统的环境变量，有时候这样会更方便，避免了每次 Configure 时都去设置。
+
 ### Qt DLLs
 
 大家用的基本上都是动态库版的 Qt，你的程序需要找到 Qt 的 DLL，比如一个最简单 QtWidgets 程序就需要三个 DLL：
