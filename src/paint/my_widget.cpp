@@ -17,7 +17,7 @@ void MyWidget::paintEvent(QPaintEvent* event) {
   const QRect& event_rect = event->rect();
   painter.fillRect(event_rect, Qt::white);
 
-  // Antialias edges of primitives if possible.
+  // Anti-alias edges of primitives if possible.
   painter.setRenderHint(QPainter::RenderHint::Antialiasing);
 
   const QRect r = rect();
