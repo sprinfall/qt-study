@@ -12,7 +12,7 @@ namespace utility {
 
 void SetBackgroundColor(QWidget* widget, const QColor& color) {
   QPalette pal = widget->palette();
-  pal.setColor(QPalette::Background, Qt::GlobalColor::red);
+  pal.setColor(QPalette::Background, color);
   widget->setAutoFillBackground(true);
   widget->setPalette(pal);
 }

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/toolbar_cut.svg</file>
+        <file>image/toolbar_cut_disable.svg</file>
+        <file>image/toolbar_delete.svg</file>
+        <file>image/toolbar_delete_disable.svg</file>
+        <file>image/toolbar_lock.svg</file>
+        <file>image/toolbar_lock_disable.svg</file>
+    </qresource>
+</RCC>
