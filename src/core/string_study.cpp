@@ -1,9 +1,24 @@
 #include <QtGlobal>  // For Q_ASSERT
 #include <QDebug>
+#include <QMatrix4x4>
 
 #include "common/utility.h"
 
 int main() {
+
+  float mt[4][4] = { { 1.0, 0.0, 0.0, 0.0 },
+                      { 0.0, 1.0, 0.0, 0.0 },
+                      { 0.0, 0.0, 1.0, 0.0 },
+                      { -1, -1, -1, 1.0 } };
+  qDebug() << mt[3][0];
+  qDebug() << mt[3][1];
+  qDebug() << mt[3][2];
+  qDebug() << mt[3][3];
+
+  QMatrix4x4 matrix;
+  matrix.setRow(3, QVector4D(1, 1, 1, 0));
+  qDebug() << matrix;
+
   QString hello = "Hello, World!";
   //std::cout << hello << std::endl;
   qInfo() << hello;

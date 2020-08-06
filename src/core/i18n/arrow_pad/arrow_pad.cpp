@@ -8,6 +8,7 @@ ArrowPad::ArrowPad(QWidget* parent) : QWidget(parent) {
   left_button_ = new QPushButton(tr("&Left"));
   right_button_ = new QPushButton(tr("&Right"));
 
+  // ÖÐÎÄ×Ö·û
   QGridLayout* layout = new QGridLayout;
 
   layout->addWidget(up_button_, 0, 1);
